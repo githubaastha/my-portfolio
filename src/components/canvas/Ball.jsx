@@ -1,18 +1,10 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import {
-  Decal,
-  Float,
-  OrbitControls,
-  Preload,
-  useTexture,
-} from "@react-three/drei";
-
+import { Decal, Float, OrbitControls, Preload, useTexture } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
-
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
       <ambientLight intensity={0.25} />
@@ -37,7 +29,41 @@ const Ball = (props) => {
   );
 };
 
+const StaticBall = ({ icon }) => {
+  return (
+    <div style={{ width: "100%", height: "100%", position: "relative" }}>
+      <img
+        src="/ball.png"
+        alt="ball"
+        style={{ width: "100%", height: "100%", objectFit: "contain" }}
+      />
+      <img
+        src={icon}
+        alt="tech"
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: "40%",
+          height: "40%",
+          objectFit: "contain",
+        }}
+      />
+    </div>
+  );
+};
+
 const BallCanvas = ({ icon }) => {
+  const [isAndroid] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return /Android/i.test(navigator.userAgent);
+  });
+
+  if (isAndroid) {
+    return <StaticBall icon={icon} />;
+  }
+
   return (
     <Canvas
       frameloop='demand'
@@ -48,7 +74,6 @@ const BallCanvas = ({ icon }) => {
         <OrbitControls enableZoom={false} />
         <Ball imgUrl={icon} />
       </Suspense>
-
       <Preload all />
     </Canvas>
   );
