@@ -32,12 +32,12 @@ const Hero = () => {
           </div>
 
           {/* Image directly below text */}
-          <div className="flex justify-center mt-0">
+          <div className="flex justify-center mt-0 -mx-4">
             <img
               src="/desktop_pc_static.png"
               alt="desktop"
-              className="w-full object-contain opacity-90"
-              style={{ maxHeight: "320px" }}
+              className="w-screen object-contain opacity-90"
+              style={{ maxHeight: "350px" }}
               onError={(e) => e.target.style.display = "none"}
             />
           </div>
