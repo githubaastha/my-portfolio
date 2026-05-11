@@ -37,15 +37,15 @@ const Hero = () => {
               src="/desktop_pc_static.png"
               alt="desktop"
               className="w-screen object-contain opacity-90"
-              style={{ maxHeight: "390px" }}
+              style={{ maxHeight: "430px" }}
               onError={(e) => e.target.style.display = "none"}
             />
           </div>
 
           {/* Scroll Indicator */}
-          <div className="w-full flex justify-center items-center mt-2">
+          <div className="w-full flex justify-center items-center mt-1">
             <a href="#about">
-              <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+              <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2 pt-0">
                 <motion.div
                   animate={{ y: [0, 24, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
