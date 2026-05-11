@@ -37,7 +37,7 @@ const Hero = () => {
               src="/desktop_pc_static.png"
               alt="desktop"
               className="w-screen object-contain opacity-90"
-              style={{ maxHeight: "350px" }}
+              style={{ maxHeight: "390px" }}
               onError={(e) => e.target.style.display = "none"}
             />
           </div>
