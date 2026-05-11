@@ -62,7 +62,7 @@ const Hero = () => {
 
   // Desktop layout
   return (
-    <section className="relative w-full h-screen mx-auto" style={{ background: "#050816" }}>
+   <section className="relative w-full h-screen mx-auto overflow-hidden" style={{ background: "#050816" }}>
 
       {/* Text */}
       <div
