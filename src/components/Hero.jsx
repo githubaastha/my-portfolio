@@ -12,14 +12,14 @@ const Hero = () => {
   // Android layout
   if (isAndroid) {
     return (
-     <section className="relative w-full mx-auto" style={{ background: "#050816", height: "auto" }}>
-        <div className={`flex flex-col pt-[120px] max-w-7xl mx-auto ${styles.paddingX}`}>
+      <section className="relative w-full mx-auto" style={{ background: "#050816", height: "auto" }}>
+        <div className={`flex flex-col pt-[100px] max-w-7xl mx-auto ${styles.paddingX}`}>
 
           {/* Text */}
           <div className="flex flex-row items-start gap-5">
             <div className="flex flex-col justify-center items-center mt-5">
               <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
-              <div className="w-1 h-40 violet-gradient" />
+              <div className="w-1 h-16 violet-gradient" />
             </div>
             <div>
               <h1 className={`${styles.heroHeadText} text-white`}>
@@ -32,7 +32,7 @@ const Hero = () => {
           </div>
 
           {/* Image directly below text */}
-          <div className="flex justify-center mt-4">
+          <div className="flex justify-center mt-0">
             <img
               src="/desktop_pc_static.png"
               alt="desktop"
@@ -43,7 +43,7 @@ const Hero = () => {
           </div>
 
           {/* Scroll Indicator */}
-          <div className="w-full flex justify-center items-center mt-6">
+          <div className="w-full flex justify-center items-center mt-2">
             <a href="#about">
               <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
                 <motion.div
