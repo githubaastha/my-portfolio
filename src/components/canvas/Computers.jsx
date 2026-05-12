@@ -3,13 +3,6 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
-import * as THREE from "three";
-
-const _computeBoundingSphere = THREE.BufferGeometry.prototype.computeBoundingSphere;
-THREE.BufferGeometry.prototype.computeBoundingSphere = function() {
-  if (this.attributes.position?.array.some(isNaN)) return;
-  _computeBoundingSphere.call(this);
-};
 
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("/desktop_pc/scene.gltf");
