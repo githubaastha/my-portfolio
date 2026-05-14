@@ -8,7 +8,7 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 import c from "./tech/c.png";
-import cpp from "./tech/cpp.png";
+import python from "./tech/python.png";
 import css from "./tech/css.png";
 import java from "./tech/java.png";
 import sql from "./tech/sql.png";
@@ -40,7 +40,7 @@ export {
   menu,
   close,
 
-  cpp,
+  python,
   css,
   figma,
   git,

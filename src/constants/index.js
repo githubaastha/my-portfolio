@@ -4,7 +4,7 @@ import {
  
   web,
   javascript,
-  cpp,
+  python,
   html,
   css,
   reactjs,
@@ -62,8 +62,8 @@ const technologies = [
     icon: c,
   },
    {
-    name: "Cpp",
-    icon: cpp,
+    name: "Python",
+    icon: python,
   },
   {
     name: "Java",
